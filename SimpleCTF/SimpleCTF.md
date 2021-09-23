@@ -1,4 +1,12 @@
-# sudo nmap -sC -sV -O 10.10.129.193 -vv 
+# SimpleCTF Room
 
+[Link to room](https://tryhackme.com/room/easyctf)
 
-gobuster dir -u http://10.10.*.* -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 40
+## Scanning
+ ```
+ sudo nmap -sC -sV -O 10.10.x.x -vv 
+```
+## Enumeration
+```
+  gobuster dir -u http://10.10.x.x -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 40
+```
