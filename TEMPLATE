@@ -1,0 +1,58 @@
+# Advent of Cyber
+
+[link to room](https://tryhackme.com/room/25daysofchristmas)
+
+## Day 1 : Inventory Management 
+#### 1.	What is the name of the cookie used for authentication?
+	
+	Go to the <machine IP:3000> and register yourself then refresh the page
+	Press CTRL + SHIFT + I to access the Developer Consoloe
+	Go to Applications tab and click on Cookies 
+
+	auth<redacted>
+
+#### 2.	If you decode the cookie, what is the value of the fixed part of the cookie?
+	
+	Access the cookie and decode the value which is encoded in base64(%3D is '=')
+	Your username is the first part and second part will be same for everybody
+
+	v4er9<redacted>
+
+#### 3. After accessing his account, what did the user 'mcinventory' request?
+	
+	user = mcinventory
+	we know the second part of cookie
+	encode 'mcinventoryv4er9111!ss' into base64(you can search online for tools)
+	bWNpbnZlbnRvcnl2NGVyOWxsMSFzcw%3D%3D
+	copy and paste it into the value and press enter and refresh
+
+	fire<redacted>
+
+##  Day 2 : Arctic Forum 
+#### 1.	What is the path of the hidden page?
+
+	Recommended tool is DirSearch but we will use gobuster
+	we will use the the recommended wordlist
+	run 'gobuster -u http://<machine IP>:3000 -w /path/to/wordlist'
+
+	/Sys<redacted>
+
+#### 2.	What is the password you found?
+	
+	goto http://<machine IP>:3000/sysadmin
+	check the page source
+	"Admin Portal Created by Arctic Digital Design - check out github repo"
+	google it 
+
+
+    username: admin
+    password: <redacted>word
+
+#### 3.	What do you have to take to the 'partay'
+
+	goto http://<machine IP>:3000/sysadmin
+	login with default credentials
+	You will see a note
+	Hey all - Please don't forget to BYOE(Bring Your Own <redacted>) for the partay!!
+
+	Egg<redacted>
