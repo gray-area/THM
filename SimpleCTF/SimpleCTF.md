@@ -26,6 +26,8 @@ Then you will search for the exploit using the following.
 ```
   searchsploit CMS Made Simple
 ```
+## Exploitation
+
 Once you have identified the CVE, download the updated python script as shown below.
 
 ```
