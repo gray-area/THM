@@ -99,6 +99,18 @@ Hint 1: Crest 2 has been encoded twice
 Hint 2: Crest 2 contanis 17 characters
 Note: You need to collect all 4 crests, combine and decode to reavel another path
 The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combination is a type of encoded base and you need to decode it
+
+You then need to combine the strings and decode from Base64
+
+```
+RlRQIHVzZXI6IGh1bnRlciwgRlRQIHBhc3M6IHlvdV9jYW50X2hpZGVfZm9yZXZlcg==
+```
+This yields the following result:
+
+```
+FTP user: hunter, FTP pass: you_cant_hide_forever
+```
+
 ```
 ftp to machine
 ```
