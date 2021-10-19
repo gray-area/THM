@@ -95,3 +95,131 @@ Hint 2: Crest 2 contanis 17 characters
 Note: You need to collect all 4 crests, combine and decode to reavel another path
 The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combination is a type of encoded base and you need to decode it
 ```
+ftp to machine
+```
+ftp> dir
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0            7994 Sep 19  2019 001-key.jpg
+-rw-r--r--    1 0        0            2210 Sep 19  2019 002-key.jpg
+-rw-r--r--    1 0        0            2146 Sep 19  2019 003-key.jpg
+-rw-r--r--    1 0        0             121 Sep 19  2019 helmet_key.txt.gpg
+-rw-r--r--    1 0        0             170 Sep 20  2019 important.txt
+```
+I then ran exiftool on the images
+
+image 1 yielded nothing
+image 2 = 5fYmVfZGVzdHJveV9
+image 3 yielded nothing
+
+Installed steghide
+
+ran the following:
+
+```
+steghide extract -sf 001-key.jpg -xf 001-key.data
+Enter passphrase: 
+wrote extracted data to "001-key.data".
+Kali :: THM/Biohazard » cat 001-key.data 
+cGxhbnQ0Ml9jYW
+```
+I then checked key 3 as follows:
+
+```
+KaliLab :: THM/Biohazard » binwalk -e 003-key.jpg 
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, JFIF standard 1.01
+1930          0x78A           Zip archive data, at least v2.0 to extract, uncompressed size: 14, name: key-003.txt
+2124          0x84C           End of Zip archive, footer length: 22
+
+Kali :: THM/Biohazard » cd _003-key.jpg.extracted 
+Kali :: Biohazard/_003-key.jpg.extracted » ls -la
+total 16
+drwxr-xr-x 2 nameless nameless 4096 Oct 19 13:26 .
+drwxr-xr-x 3 nameless nameless 4096 Oct 19 13:26 ..
+-rw-r--r-- 1 nameless nameless  216 Oct 19 13:26 78A.zip
+-rw-r--r-- 1 nameless nameless   14 Sep 19  2019 key-003.txt
+KaliLab :: Biohazard/_003-key.jpg.extracted » cat key-003.txt 
+3aXRoX3Zqb2x0
+```
+
+
+Combine all three keys and use CyberChef to go "From Base64"
+
+```
+cGxhbnQ0Ml9jYW5fYmVfZGVzdHJveV93aXRoX3Zqb2x0
+```
+
+```
+plant42_can_be_destroy_with_vjolt
+```
+
+/hiddenCloset/
+
+```
+wpbwbxr wpkzg pltwnhro, txrks_xfqsxrd_bvv_fy_rvmexa_ajk
+```
+
+```
+SSH password: T_virus_rules
+```
+
+I then SSH into the box:
+
+Nothing really to look at, so I moved to weaskers directory and opened the file.
+
+```
+Weaker: Finally, you are here, Jill.
+Jill: Weasker! stop it, You are destroying the  mankind.
+Weasker: Destroying the mankind? How about creating a 'new' mankind. A world, only the strong can survive.
+Jill: This is insane.
+Weasker: Let me show you the ultimate lifeform, the Tyrant.
+
+(Tyrant jump out and kill Weasker instantly)
+(Jill able to stun the tyrant will a few powerful magnum round)
+
+Alarm: Warning! warning! Self-detruct sequence has been activated. All personal, please evacuate immediately. (Repeat)
+Jill: Poor bastard
+
+```
+
+
+I then when back to root, because i was missing something. 
+
+I did an ``` ls -la``` and found that there was a directory called ```.jailcell```
+
+After going in there, I opened the file:
+
+```
+Jill: Chris, is that you?
+Chris: Jill, you finally come. I was locked in the Jail cell for a while. It seem that weasker is behind all this.
+Jil, What? Weasker? He is the traitor?
+Chris: Yes, Jill. Unfortunately, he play us like a damn fiddle.
+Jill: Let's get out of here first, I have contact brad for helicopter support.
+Chris: Thanks Jill, here, take this MO Disk 2 with you. It look like the key to decipher something.
+Jill: Alright, I will deal with him later.
+Chris: see ya.
+
+MO disk 2: albert 
+```
+I then took the encoded text from earlier, and used the MO disk 2 code:
+
+```
+wpbwbxr wpkzg pltwnhro, txrks_xfqsxrd_bvv_fy_rvmexa_ajk
+```
+
+```
+weasker login password, stars_members_are_my_guinea_pig
+```
+
+I then logged into SSH with the weasker credentials.
+
+After logging in, I was able to "cat" the text by using the following:
+
+```
+sudo -u root cat /root/root.txt
+```
+
+This gave me the root flag.
