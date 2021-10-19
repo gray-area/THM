@@ -1,4 +1,9 @@
-/diningRoom/
+## Intro
+
+I will openly admit, after the first section I struggled with this, as encoding and encryption are not my strongsuit - yet. Because of this, i would use hints from walkthroughs to get me on the right track. Dont be discouraged if you dont know the methods. This is used to learn things that you dont know and expose you to different techniques. 
+
+
+### /diningRoom/
 
 ```SG93IGFib3V0IHRoZSAvdGVhUm9vbS8```
 
@@ -10,11 +15,11 @@
 
 ```blue_jewel{e1d457e96cac640f863ec7bc475d48aa}```
 
-/teaRoom/
+### /teaRoom/
 
 ```lock_pick{037b35e2ff90916a9abf99129c8e1837}```
 
-/artRoom/
+### /artRoom/
 
 ```<p>Look like a map</p>
 
@@ -31,7 +36,7 @@
 /attic/
 ```
 
-/barRoom/
+### /barRoom/
 
 ```NV2XG2LDL5ZWQZLFOR5TGNRSMQ3TEZDFMFTDMNLGGVRGIYZWGNSGCZLDMU3GCMLGGY3TMZL5```
 
@@ -45,13 +50,13 @@
 
 ```gold_emblem{58a8c41a9d08b8a4e38d02a4d7ff4843}```
 
-/diningRoom2F/
+### /diningRoom2F/
 
 ```Lbh trg gur oyhr trz ol chfuvat gur fgnghf gb gur ybjre sybbe. Gur trz vf ba gur qvavatEbbz svefg sybbe. Ivfvg fnccuver.ugzy```
 
 ```You get the blue gem by pushing the status to the lower floor. The gem is on the diningRoom first floor. Visit sapphire.html```
 
-/tigerStatusRoom/
+### /tigerStatusRoom/
 
 ```
 crest 1:
@@ -62,7 +67,7 @@ Note: You need to collect all 4 crests, combine and decode to reavel another pat
 The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combination is a type of encoded base and you need to decode it
 ```
 
-/galleryRoom/
+### /galleryRoom/
 
 ```
 crest 2:
@@ -74,7 +79,7 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
 ```
 
 
-/armorRoom/
+### /armorRoom/
 
 ```
 crest 3:
@@ -85,7 +90,7 @@ Note: You need to collect all 4 crests, combine and decode to reavel another pat
 The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combination is a type of encoded base and you need to decode it
 ```
 
-/attic/
+### /attic/
 
 ```
 crest 4:
@@ -156,7 +161,7 @@ cGxhbnQ0Ml9jYW5fYmVfZGVzdHJveV93aXRoX3Zqb2x0
 plant42_can_be_destroy_with_vjolt
 ```
 
-/hiddenCloset/
+### /hiddenCloset/
 
 ```
 wpbwbxr wpkzg pltwnhro, txrks_xfqsxrd_bvv_fy_rvmexa_ajk
