@@ -1,7 +1,7 @@
 # Daily Bugle Walkthrough -THM
 
 
-![MainPage](/THM/DailyBugle/Sources/DailyBugle.png "Website")
+![MainPage](https://github.com/gray-area/THM/blob/main/DailyBugle/Sources/DailyBugle.png "Website")
 
 enumerate shares by using gobuster
 
@@ -9,10 +9,12 @@ enumerate shares by using gobuster
 gobuster dir -u http://10.10.87.111 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 40
 ```
 
+![gobuster](https://github.com/gray-area/THM/blob/main/DailyBugle/Sources/gobuster.png "Website")
+
 
 The administrator directory looks interesting...
 
-
+![gobuster]("https://github.com/gray-area/THM/blob/main/DailyBugle/Sources/Joomla login.png" "Website")
 
 Joomla login.
 
@@ -21,7 +23,7 @@ Downloaded joomscan
 ```
 perl joomscan.pl -u http://10.10.87.111
 ```
-
+![gobuster](https://github.com/gray-area/THM/blob/main/DailyBugle/Sources/Joomscan.png "Website")
 
 Version found!
 
@@ -34,6 +36,8 @@ wget https://github.com/XiphosResearch/exploits/blob/3950e7618b1920b3d7d34ec6f72
 ```
 python3 joomblah_py3.py http://10.10.172.228
 ```
+
+![gobuster](https://github.com/gray-area/THM/blob/main/DailyBugle/Sources/joomlah_run.png "Website")
 
 I created a text file with copied hash from joomblah output
 
