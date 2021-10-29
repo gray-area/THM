@@ -1,6 +1,8 @@
 # Daily Bugle Walkthrough -THM
 
 
+![MainPage](/THM/DailyBugle/Sources/DailyBugle.png "Website")
+
 enumerate shares by using gobuster
 
 ```
