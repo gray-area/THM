@@ -14,7 +14,7 @@ gobuster dir -u http://10.10.87.111 -w /usr/share/wordlists/dirbuster/directory-
 
 The administrator directory looks interesting...
 
-![Joomlar]("https://github.com/gray-area/THM/blob/main/DailyBugle/Sources/Joomlalogin.png" "Website")
+![Joomlah]("https://github.com/gray-area/THM/blob/main/DailyBugle/Sources/Joomlalogin.png" "Website")
 
 Joomla login.
 
